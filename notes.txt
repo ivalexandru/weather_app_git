@@ -1,0 +1,12 @@
+nodemon:
+  "scripts": {
+    "dev": "npx nodemon ./src/app.js -e js,hbs"
+  },
+
+  -e js, hbs pt a face reload si pt extensia hbs (handlebars templating)
+
+    term: npm run dev
+
+
+    
+
