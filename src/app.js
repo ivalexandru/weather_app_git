@@ -145,6 +145,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("serv up on 3k");
+app.listen(port, () => {
+  console.log(`serv up on port: ${port}`);
 });
