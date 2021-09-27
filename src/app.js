@@ -10,6 +10,8 @@ const express = require("express");
 console.log(__dirname);
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 //needed for partials
 const hbs = require("hbs");
 

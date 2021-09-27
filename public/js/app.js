@@ -10,18 +10,19 @@ weatherForm.addEventListener("submit", (e) => {
   const location = search.value;
 
   // fetch is async
-  fetch("http://localhost:3000/weather?address=" + location).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          p_location = data.error;
-        } else {
-          p_location.textContent = data.location;
-          p_forecast.textContent = data.forecast;
-        }
-      });
-    }
-  );
+  //  echivalent cu
+  //fetch("http://localhost:3000/weather?address=" + location) pe localhost
+  // si este inlocuit de heroku, daca e rulat pe heroku
+  fetch("/weather?address=" + location).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        p_location = data.error;
+      } else {
+        p_location.textContent = data.location;
+        p_forecast.textContent = data.forecast;
+      }
+    });
+  });
 
   console.log(location + " was typed in form_weather");
 });
