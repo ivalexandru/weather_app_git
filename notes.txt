@@ -7,9 +7,10 @@ nodemon:
 
     term: npm run dev
 
-am scos din scripts:
-    "dev": "npx nodemon ./src/app.js -e js,hbs"
-sa vad daca de acolo e eroarea (heroku ! [remote rejected] main -> main (pre-receive hook declined))
+
+
+
+
 
 
 

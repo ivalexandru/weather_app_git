@@ -17,10 +17,13 @@ const forecast = (latitude, longitude, callback) => {
       let city = body.location.name;
       const temp = body.current.temperature;
       const feel = body.current.feelslike;
+      const windSpeed = body.current.wind_speed;
       const description = body.current.weather_descriptions[0];
       callback(
         undefined,
-        `${description} -  it is ${temp} degrees in ${city}. It feels like ${feel}`
+        `${description} -  it is ${temp} degrees in ${city}. 
+         It feels like ${feel}. 
+         Wind speed is: ${windSpeed}`
       );
     }
   });
